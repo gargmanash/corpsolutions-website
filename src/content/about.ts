@@ -1,0 +1,33 @@
+export const about = {
+  intro: [
+    "CorpSolutions is a quality service provider in the area of consultancy, business process outsourcing and recruitment. We consistently deliver a wide range of services in the area of Insurance, Telecom and Banking Sectors. We provide multiple solutions to our client at a single stop. Our service suite encompasses all the elements of back office operations, finance, accounting and recruitment value chain. Our offerings are tailored specifically to meet clients' needs.",
+    "We focus on high-end services at the core of the customer organization. Our philosophy of delving deep into the customer's business and suggesting consistent process improvements has helped us create strong relationships with our clients. We establish long-term, strategic relationships with specialized service providers to gain a competitive edge.",
+    "We believe in continuous process development and automation. We have a highly qualified and skilled in house IT team which consistently automates various processes for our clients. The automation of processes has not only reduced cost drastically but also enabled our clients to focus more on their core activities.",
+    "We have a strong team of inbound and outbound telecallers to provide various back office and front office telecalling services to some of the leading service sector companies. We have developed our network in the various part of India and provide multi location collection / recovery services to our insurance and banking sector clients. We ensure to render quality services to both clients and their customers.",
+    "Our greatest assets are our human resource at all levels led by experienced and highly qualified Professionals. Our specialization includes placements of senior, middle and entry level professionals in the field of Insurance, Banking, Telecom, BPO, FMCG, Hospitality, etc.",
+  ],
+  innovationQuote:
+    'CorpSolutions believes in "Innovation" which is the specific instrument of entrepreneurship. Our purpose of Innovation is to create higher value for our customers without putting burden on cost.',
+  whyReasons: [
+    'Single stop for multiple services',
+    'Completion of activities within the set deadline; improve speed',
+    'Benefit from the expertise in solving problems for a variety of clients with similar requirements',
+    'Reduction in headcounts and manpower cost',
+    'Reduction in operating cost',
+    'Reduction in capital expenditure',
+    'Avoid the cost of chasing technology',
+    'Free up resources for other core activities',
+    'Leverage the wide network at significantly lower cost',
+    'Focus on strategic thinking, process reengineering and managing trading partner relationships',
+    'Reduce the overall IT management burden while retaining control of strategic decision making',
+    'Identify internal control lapses and improve systems & processes',
+    'Improve efficiency and provide value-added services',
+    'Increase customer satisfaction',
+    'Get access to specialized skills',
+    'Keep pace and minimize the impact of rapid changes in applications and standards',
+    'Reduce hassles for locating manpower for non-core activities',
+    'Reduce hassles for compliance of various regulatory laws relating to human resources',
+    'Saving in training costs',
+    'Establish long-term, strategic relationships with specialized service providers to gain a competitive edge',
+  ],
+} as const

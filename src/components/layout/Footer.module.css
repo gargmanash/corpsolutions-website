@@ -1,0 +1,91 @@
+.footer {
+  background: var(--dark-900);
+  color: var(--dark-text-mid);
+  padding-block: var(--space-10) var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.4fr 0.8fr 1.2fr;
+  gap: var(--space-7);
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--dark-line);
+}
+
+/* Brand */
+.brand { display: flex; flex-direction: column; gap: var(--space-4); }
+.brandDesc { font-size: var(--step--1); line-height: 1.65; color: var(--dark-text-mid); }
+.brandEmail {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--step--1); color: var(--azure);
+  transition: opacity var(--dur-fast);
+}
+.brandEmail:hover { opacity: 0.8; }
+
+/* Cols */
+.col { display: flex; flex-direction: column; gap: var(--space-2); }
+.colTitle {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-text-hi);
+  margin-bottom: var(--space-2);
+}
+.link {
+  font-size: var(--step--1);
+  color: var(--dark-text-mid);
+  transition: color var(--dur-fast);
+}
+.link:hover { color: var(--azure); }
+
+.serviceGroup { display: flex; flex-direction: column; gap: var(--space-1); margin-bottom: var(--space-3); }
+
+/* Offices */
+.office { margin-bottom: var(--space-5); }
+.officeType {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--azure);
+  margin-bottom: var(--space-2);
+}
+.officeAddr {
+  display: flex; gap: var(--space-2); align-items: flex-start;
+  font-size: var(--step--1); line-height: 1.55;
+  color: var(--dark-text-mid); margin-bottom: var(--space-2);
+}
+.officeContact {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--step--1); color: var(--dark-text-mid);
+  transition: color var(--dur-fast);
+}
+.officeContact:hover { color: var(--azure); }
+
+/* Bottom */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-5);
+  font-size: var(--step--1);
+  color: var(--dark-text-lo);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.bottomLink {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  color: var(--dark-text-lo);
+  transition: color var(--dur-fast);
+}
+.bottomLink:hover { color: var(--azure); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+  .bottom { flex-direction: column; align-items: flex-start; }
+}

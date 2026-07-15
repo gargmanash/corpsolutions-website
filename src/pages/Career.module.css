@@ -1,0 +1,90 @@
+.pageHero {
+  position: relative;
+  background: var(--dark-900);
+  padding-block: 10rem 6rem;
+  overflow: hidden;
+}
+.heroDiamond {
+  position: absolute;
+  width: 280px; height: 280px;
+  border-radius: 14px;
+  transform: rotate(45deg);
+  top: -40px; right: 6%;
+  background: rgba(122, 63, 176, 0.1);
+  border: 1.5px solid rgba(122, 63, 176, 0.2);
+  pointer-events: none;
+}
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hr);
+  margin-bottom: var(--space-4);
+}
+.heroTitle { font-size: var(--step-5); color: var(--dark-text-hi); margin-bottom: var(--space-5); max-width: 700px; }
+.heroSub { font-size: var(--step-1); color: var(--dark-text-mid); max-width: 580px; line-height: 1.65; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.sectionTitle { font-size: var(--step-3); color: var(--text-hi); margin-bottom: var(--space-5); }
+.para { font-size: var(--step-0); color: var(--text-mid); line-height: 1.75; margin-bottom: var(--space-4); }
+
+.applyCard {
+  position: sticky;
+  top: 7rem;
+}
+.applyCardInner {
+  background: var(--dark-900);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border: 1px solid var(--dark-line);
+}
+.applyIcon { color: var(--hr); }
+.applyTitle { font-size: var(--step-2); color: var(--dark-text-hi); }
+.applyDesc { font-size: var(--step--1); color: var(--dark-text-mid); line-height: 1.65; }
+.applyEmail {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--hr);
+  word-break: break-all;
+}
+
+.areasSection { background: var(--bg-50); }
+.areasGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.areaChip {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--bg-0);
+  border: 1.5px solid var(--line);
+  padding: 0.6em 1.2em;
+  border-radius: var(--radius-pill);
+  transition: border-color var(--dur-fast), background var(--dur-fast);
+}
+.areaChip:hover { border-color: var(--hr); background: var(--hr-soft); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .applyCard { position: static; }
+}
+@media (max-width: 600px) {
+  .heroTitle { font-size: var(--step-4); }
+}

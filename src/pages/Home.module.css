@@ -1,0 +1,372 @@
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--dark-900);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heroBgGradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0, 174, 239, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(30, 42, 120, 0.5) 0%, transparent 70%),
+    linear-gradient(160deg, var(--dark-900) 0%, var(--dark-800) 100%);
+}
+
+/* Decorative diamonds (CSS-only, the deck motif) */
+.heroDiamond1,
+.heroDiamond2,
+.heroDiamond3 {
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 12px;
+}
+.heroDiamond1 {
+  width: 280px; height: 280px;
+  top: -60px; right: 8%;
+  background: rgba(0, 174, 239, 0.08);
+  border: 1.5px solid rgba(0, 174, 239, 0.18);
+}
+.heroDiamond2 {
+  width: 180px; height: 180px;
+  top: 140px; right: 18%;
+  background: rgba(30, 42, 120, 0.25);
+  border: 1px solid rgba(30, 42, 120, 0.5);
+}
+.heroDiamond3 {
+  width: 120px; height: 120px;
+  bottom: 10%; right: 30%;
+  background: rgba(0, 174, 239, 0.05);
+  border: 1px solid rgba(0, 174, 239, 0.12);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 5rem;
+}
+
+.heroContent { max-width: 760px; }
+
+.heroEyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--azure);
+  background: rgba(0, 174, 239, 0.1);
+  border: 1px solid rgba(0, 174, 239, 0.25);
+  padding: 0.35em 1em;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+}
+
+.heroTitle {
+  font-size: var(--step-5);
+  color: var(--dark-text-hi);
+  line-height: 1.06;
+  margin-bottom: var(--space-5);
+}
+
+.heroAccent { color: var(--azure); }
+
+.heroSub {
+  font-size: var(--step-1);
+  color: var(--dark-text-mid);
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: var(--space-7);
+}
+
+.heroCtas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.heroSectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-9);
+}
+
+.sectorChip {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--dark-text-mid);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.3em 0.85em;
+  border-radius: var(--radius-pill);
+}
+
+/* ── PILLARS ─────────────────────────────────────────────────── */
+.pillars { background: var(--bg-50); }
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.pillarCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-0);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-decoration: none;
+  transition: border-color var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out),
+              transform var(--dur) var(--ease-out);
+}
+.pillarCard:hover {
+  border-color: var(--pillar-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pillar-color) 12%, transparent), var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.pillarIcon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius);
+  background: var(--pillar-soft);
+  color: var(--pillar-color);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-5);
+}
+
+.pillarTitle {
+  font-size: var(--step-2);
+  color: var(--pillar-color);
+  margin-bottom: var(--space-4);
+}
+
+.pillarServices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  flex: 1;
+}
+.pillarServices li {
+  font-size: var(--step--1);
+  color: var(--text-mid);
+  padding-left: var(--space-4);
+  position: relative;
+}
+.pillarServices li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--pillar-color);
+  opacity: 0.6;
+}
+
+.pillarCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--pillar-color);
+  margin-top: auto;
+}
+
+/* ── SERVICES GRID ───────────────────────────────────────────── */
+.servicesSection { background: var(--bg-0); }
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  background: var(--bg-0);
+  transition: border-color var(--dur-fast), box-shadow var(--dur-fast), transform var(--dur-fast);
+}
+.serviceCard:hover {
+  border-color: var(--pillar-color);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.serviceCardPillar {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pillar-color);
+  margin-bottom: var(--space-2);
+}
+
+.serviceCardName {
+  font-size: var(--step-1);
+  color: var(--text-hi);
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+}
+
+.serviceCardDesc {
+  font-size: var(--step--1);
+  color: var(--text-lo);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.serviceCardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--pillar-color);
+  margin-top: auto;
+}
+
+/* ── WHY ─────────────────────────────────────────────────────── */
+.whySection { background: var(--bg-50); }
+
+.whyInner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.whyBtn { margin-top: var(--space-6); }
+
+.whyRight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.whyReason {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--step-0);
+  color: var(--text-mid);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-0);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.whyIcon { color: var(--azure); flex-shrink: 0; margin-top: 3px; }
+
+/* ── CLIENTS ─────────────────────────────────────────────────── */
+.clientsSection { background: var(--bg-0); text-align: center; }
+
+.clientsLabel {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-lo);
+  margin-bottom: var(--space-6);
+}
+
+.clientsStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-bottom: var(--space-7);
+}
+
+.clientChip {
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text-mid);
+  background: var(--bg-50);
+  border: 1px solid var(--line);
+  padding: 0.4em 1em;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.clientsAction { display: flex; justify-content: center; }
+
+/* ── CTA BAND ────────────────────────────────────────────────── */
+.ctaBand {
+  background: var(--dark-900);
+  padding-block: var(--section-y);
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: var(--step-4);
+  color: var(--dark-text-hi);
+  margin-bottom: var(--space-4);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.ctaSub {
+  font-size: var(--step-1);
+  color: var(--dark-text-mid);
+  margin-bottom: var(--space-7);
+}
+
+.ctaActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaEmail {
+  font-size: var(--step-0);
+  color: var(--azure);
+  font-weight: 500;
+}
+.ctaEmail:hover { opacity: 0.8; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .pillarsGrid { grid-template-columns: 1fr; }
+  .whyInner { grid-template-columns: 1fr; gap: var(--space-7); }
+}
+@media (max-width: 600px) {
+  .heroTitle { font-size: var(--step-4); }
+  .heroCtas { flex-direction: column; }
+  .servicesGrid { grid-template-columns: 1fr; }
+}

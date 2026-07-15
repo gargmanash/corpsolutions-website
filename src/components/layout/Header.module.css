@@ -1,0 +1,186 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  transition: background var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out),
+              padding var(--dur) var(--ease-out);
+  padding-block: 1.4rem;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--line), 0 4px 20px rgba(12, 18, 38, 0.06);
+  padding-block: 0.9rem;
+}
+
+.header.transparent {
+  background: transparent;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.5em 0.8em;
+  border-radius: var(--radius-sm);
+  color: var(--text-mid);
+  transition: color var(--dur-fast), background var(--dur-fast);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.navLink:hover, .navLink.active {
+  color: var(--navy);
+  background: var(--bg-50);
+}
+
+/* Transparent variant: white links */
+.header.transparent .navLink {
+  color: rgba(255,255,255,0.85);
+}
+.header.transparent .navLink:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+}
+
+.ctaBtn {
+  margin-left: var(--space-3);
+}
+
+/* MEGA MENU */
+.megaWrap {
+  position: relative;
+}
+
+.megaPanel {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-0);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  min-width: 640px;
+  z-index: var(--z-menu);
+}
+
+.megaCol h3 {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid currentColor;
+}
+
+.megaCol.consultancy h3 { color: var(--consultancy); }
+.megaCol.outsourcing h3 { color: var(--outsourcing); }
+.megaCol.hr h3 { color: var(--hr); }
+
+.megaServiceLink {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text-mid);
+  padding: 0.35em 0.5em;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast), background var(--dur-fast), padding-left var(--dur-fast);
+}
+.megaServiceLink:hover { color: var(--text-hi); background: var(--bg-50); padding-left: 0.85em; }
+
+.megaCol.consultancy .megaServiceLink:hover { color: var(--consultancy); }
+.megaCol.outsourcing .megaServiceLink:hover { color: var(--outsourcing); }
+.megaCol.hr .megaServiceLink:hover { color: var(--hr); }
+
+/* MOBILE */
+.mobileToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-hi);
+}
+.header.transparent .mobileToggle { color: #fff; }
+
+.mobileDrawer {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-0);
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--gutter);
+  overflow-y: auto;
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.mobileNav { display: flex; flex-direction: column; gap: var(--space-1); }
+
+.mobileNavLink {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--text-hi);
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobileGroup { margin-bottom: var(--space-5); }
+.mobileGroupTitle {
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+.mobileGroupTitle.consultancy { color: var(--consultancy); }
+.mobileGroupTitle.outsourcing { color: var(--outsourcing); }
+.mobileGroupTitle.hr { color: var(--hr); }
+
+.mobileServiceLink {
+  display: block;
+  font-size: var(--step-0);
+  color: var(--text-mid);
+  padding: 0.45em 0;
+  border-bottom: 1px solid var(--bg-100);
+}
+
+@media (max-width: 900px) {
+  .nav, .ctaBtn { display: none; }
+  .mobileToggle { display: flex; }
+}
