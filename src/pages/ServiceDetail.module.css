@@ -34,9 +34,9 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--pillar-color);
-  background: color-mix(in srgb, var(--pillar-color) 15%, transparent);
-  border: 1px solid color-mix(in srgb, var(--pillar-color) 30%, transparent);
+  color: #fff;
+  background: color-mix(in srgb, var(--pillar-color) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--pillar-color) 60%, transparent);
   padding: 0.3em 0.9em;
   border-radius: var(--radius-pill);
   margin-bottom: var(--space-4);

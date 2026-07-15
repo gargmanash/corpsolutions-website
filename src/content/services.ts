@@ -257,7 +257,7 @@ export const services: Service[] = [
     shortDesc: 'On-demand, online employment background verification that eliminates errors and accelerates the hiring process.',
     intro: [
       'Verifying employment background can be very time-consuming, difficult and error prone for a variety of reasons. Organizations contacted to confirm employment history may be unresponsive and applicants often provide inaccurate or incomplete information. Our employment verification helps solve these issues through its online and on-demand service.',
-      'CorpSolutions employment verification is an on-demand service that is integrated with our screening solutions. Our skilled executives confirm an applicant work history, such as company names and locations, date of joining, positions, remuneration, titles held and reason of leaving.',
+      "CorpSolutions employment verification is an on-demand service that is integrated with our screening solutions. Our skilled executives confirm an applicant's work history, such as company names and locations, date of joining, positions, remuneration, titles held and reason of leaving.",
     ],
     bulletGroups: [
       {

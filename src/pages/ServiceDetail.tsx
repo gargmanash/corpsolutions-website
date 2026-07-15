@@ -96,7 +96,7 @@ export default function ServiceDetail() {
               </div>
               <div className={styles.sideContact}>
                 <p className={styles.sideContactText}>Ready to get started?</p>
-                <Button to="/contact" variant="outline" size="sm">Contact Us</Button>
+                <Button to="/contact" variant="ghost" size="sm">Contact Us</Button>
               </div>
             </aside>
           </div>
