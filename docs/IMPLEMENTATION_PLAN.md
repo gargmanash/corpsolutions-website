@@ -12,11 +12,14 @@
 
 **What we're building:** A cinematic, multi-route corporate marketing site for **CorpSolutions Services Private Limited** — a Consultancy / Outsourcing / Recruitment firm serving Insurance, Telecom, and Banking sectors in India.
 
-**Design intent — "corporate cinematic":**
-- Full-viewport hero with slow, deliberate motion (premium, trustworthy, not flashy).
-- Dark editorial base + the deck's **per-pillar accent colors** (Consultancy blue, Outsourcing teal, HR purple) + the diamond/rhombus geometric motif from the deck.
+**Design direction — "institutional editorial with cinematic craft":**
+- **Light-dominant, trust-first** base (not full dark) — chosen deliberately for risk-averse enterprise buyers (CFO/HR/ops at regulated financial firms) and dense service content. Credibility (client logos, track record, named CA leadership) leads; spectacle serves it.
+- **Cinematic craft, not cinematic mood:** confident editorial typography, generous space, depth, and *purposeful* motion. Reserve true dark-cinematic treatment for **one dramatic hero beat** + a small number of dark accent bands for rhythm — a seasoning, not the whole site.
+- The deck's **per-pillar accent colors** (Consultancy blue, Outsourcing teal, HR purple) + the diamond/rhombus geometric motif.
 - Scroll-driven reveals; restrained, GPU-cheap motion; respects `prefers-reduced-motion`.
 - Feels fast, fully responsive, accessible (WCAG 2.1 AA target), SEO-clean.
+
+> **Design rationale (why not full cinematic-dark):** CorpSolutions sells payroll, reconciliation, and statutory compliance to risk-averse enterprise buyers. Heavy dark/moody design signals "creative/expressive," which undercuts the trust-and-accuracy signal that wins these deals, and fights the readability of dense bulleted service copy. Light-dominant institutional-editorial converts better here while still feeling premium and modern.
 
 **Non-negotiables:**
 1. Content taken **only** from provided sources (deck = primary). No invented facts, figures, or client names.
@@ -34,7 +37,8 @@
 | Framework | **Vite + React + TypeScript** (static SPA) |
 | Logo | **Recreate as clean SVG** wordmark ("CorpSolutions" + tagline) |
 | Service taxonomy | **Follow the deck** (drops older Data Entry / Collection / Customer Query / Address Verification) |
-| Color system | **Per-pillar accents** (blue / teal / purple) over a cinematic dark base |
+| Design direction | **Institutional editorial + cinematic craft** — light-dominant, trust-first; dark reserved for hero + accent bands |
+| Color system | **Per-pillar accents** (blue / teal / purple) over a light-dominant base |
 | Head Office address | **436-437**, Blue Rose Industrial Estate (from the deck) |
 | Management team | **3 members** (per current content doc) |
 | Legacy content | Use as-is; client corrects post-build |
@@ -113,11 +117,14 @@ Reconciled from the **deck** (authoritative).
 
 ## 6. Design System
 
-### 6.1 Color tokens — cinematic dark base + per-pillar accents
+### 6.1 Color tokens — light-dominant base + per-pillar accents
 ```
-/* base (cinematic dark) */
---bg-900:#0A0E1A  --bg-800:#101627  --bg-700:#18203A  --line:#26304C
---text-hi:#F4F7FF --text-mid:#AEB8D0 --text-lo:#6C789A
+/* base (light-dominant, editorial) */
+--bg-0:#FFFFFF   --bg-50:#F5F7FC  --bg-100:#EDF1F8   /* page + alt sections */
+--line:#DCE3F0
+--text-hi:#0C1226 --text-mid:#3C4763 --text-lo:#6C789A
+/* dark accent (hero beat + rhythm bands only) */
+--dark-900:#0A0E1A --dark-800:#101627 --dark-text-hi:#F4F7FF --dark-text-mid:#AEB8D0
 /* brand */
 --navy:#1E2A78          /* logo wordmark navy */
 --azure:#00AEEF         /* logo accent / global CTA */
@@ -125,10 +132,8 @@ Reconciled from the **deck** (authoritative).
 --consultancy:#1CA0E3   /* blue */
 --outsourcing:#12B5A5   /* teal */
 --hr:#7A3FB0            /* purple */
-/* light-section variant */
---bg-50:#F5F7FC  (dark text) — for alternating light/dark bands
 ```
-Each service page + its cards/nav column are tinted with the pillar accent (used in gradients, borders, icon chips, active states). Global CTAs use `--azure`.
+Body is light and highly readable. Dark tokens are used **only** for the hero and a few full-bleed rhythm bands. Each service page + its cards/nav column are tinted with the pillar accent (gradients, borders, icon chips, active states). Global CTAs use `--azure`.
 
 ### 6.2 Typography
 - **Display/headings:** Space Grotesk *or* Fraunces (pick in design review).
